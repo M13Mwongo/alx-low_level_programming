@@ -8,7 +8,7 @@
 int main(void)
 {
 	/* Declare variables*/
-	char statement[] = '"Programming is like building a multilingual puzzle';
+	char statement[] = "\"Programming is like building a multilingual puzzle";
 	/*statements*/
 	puts(statement);
 
