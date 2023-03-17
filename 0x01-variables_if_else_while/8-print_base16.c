@@ -6,11 +6,19 @@
  */
 int main(void)
 {
-	int a;
+	unsigned char hex = '0';
+	int i;
 
-	for (a = '0'; a < '16'; a++)
+	for (i = '0'; i < '16'; i++)
 	{
-		putchar(a);
+		putchar(hex);
+		hex++;
+	}
+	hex = '1';
+	for (i = 0; i < 6; i++)
+	{
+		putchar('0' + hex);
+		hex++;
 	}
 	putchar('\n');
 	return (0);
