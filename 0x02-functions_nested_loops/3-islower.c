@@ -7,7 +7,7 @@
  * @c: character to be checked
  * Return: 1 if true, 0 if false
  */
-int _islower(char c)
+int _islower(int c)
 {
 	if (islower(c) > 0)
 	{
