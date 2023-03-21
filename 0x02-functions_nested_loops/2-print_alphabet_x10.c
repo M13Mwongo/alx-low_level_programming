@@ -1,13 +1,4 @@
-#include <stdio.h>
-/**
- * main - entry point
- * Return: Always 0 (success)
- */
-int main(void)
-{
-	print_alphabet_x10();
-	return (0);
-}
+#include "main.h"
 /**
  * print_alphabet_x10 - prints alphabet on new line 10 times
  */
@@ -20,8 +11,8 @@ void print_alphabet_x10(void)
 	{
 		for (c = 'a'; c <= 'z'; c++)
 		{
-			putchar(c);
+			_putchar(c);
 		}
-		putchar('\n');
+		_putchar('\n');
 	}
 }
