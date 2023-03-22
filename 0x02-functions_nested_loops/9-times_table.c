@@ -20,7 +20,7 @@ void times_table(void)
 			}
 			else if (j <= 9)
 			{
-				if (prpduct <= 9)
+				if (product <= 9)
 				{
 					printf(",  %d", product);
 				} else
