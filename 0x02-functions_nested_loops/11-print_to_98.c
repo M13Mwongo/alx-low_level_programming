@@ -13,12 +13,10 @@ void print_to_98(int n)
 	{
 		if (i == n)
 		{
-			_putchar(i + '0');
+			printf("0");
 		} else
 		{
-			_putchar(',');
-			_putchar(' ');
-			_putchar(i + '0');
+			printf(", %d",i);
 		}
 	}
 	_putchar('\n');
