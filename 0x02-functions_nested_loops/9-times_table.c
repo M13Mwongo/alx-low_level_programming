@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * times_table - prints the entirety of the times tables of 9
  *
@@ -20,10 +21,7 @@ void times_table(void)
 			}
 			else if (j <= 9)
 			{
-				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
-				_putchar(product + '0');
+				printf(",  %d", product);
 			}
 			else 
 			{
@@ -33,6 +31,6 @@ void times_table(void)
 				_putchar(product % 10 + '0');
 			}
 		}
-		_putchar('\n');
+		printf("\n");
 	}
 }
