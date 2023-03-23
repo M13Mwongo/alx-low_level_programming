@@ -3,6 +3,6 @@
 
 int main(void)
 {
-	printf("%d",_isdigit(9));
+	print_numbers();
 	return (0);
 }
