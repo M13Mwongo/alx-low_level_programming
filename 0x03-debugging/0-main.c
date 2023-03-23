@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>
+#include "positive_or_negative.c"
 /**
  * main - test positive_or_negative function
  *
