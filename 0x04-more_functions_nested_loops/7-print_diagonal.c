@@ -1,15 +1,18 @@
 #include "main.h"
 /**
- * print_diagonal - prints a diagonal line
- * @n: number of backslashes to print
+ * print_diagonal - prints diagonal stuff
  *
- * Return: null
+ * @n: integer to set diagonal
  */
 void print_diagonal(int n)
 {
-	int i, j;
+	int i;
+	int j;
 
-	if (n > 0)
+	if (n <= 0)
+	{
+		_putchar('\n');
+	} else
 	{
 		for (i = 0; i < n; i++)
 		{
@@ -20,10 +23,5 @@ void print_diagonal(int n)
 			_putchar('\\');
 			_putchar('\n');
 		}
-		_putchar('\n');
-	}
-	else
-	{
-		_putchar('\n');
 	}
 }
