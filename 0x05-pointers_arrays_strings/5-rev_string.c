@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 /**
  * rev_string - reverses a string
  * @s: string to be reversed
@@ -7,15 +8,12 @@
  */
 void rev_string(char *s)
 {
-	int i = 0;
+	int i, length, temp;
 
-	while (s[i] != '\0')
+	length = strlen(s);
+	for (i = 0; i < length / 2; i++)
 	{
-		i++;
-	}
-	for (i -= 1; i >= 0; i--)
-	{
-		putchar(s[i]);
-	}
-	putchar('\n');
+		temp = s[i];
+		s[i] = s[length - i - 1];
+		s[length - i - 1] = temp;
 }
