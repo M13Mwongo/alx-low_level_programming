@@ -14,6 +14,10 @@ char *cap_string(char *s)
 	{
 		if (*(s + i) >= 'a' && *(s + i) <= 'z')
 		{
+			if (i == 0)
+			{
+				*(s + i) -=32;
+			}
 			for (j = 0; j < 13; j++)
 			{
 				if (specialArray[j] == *(s + i - 1))
