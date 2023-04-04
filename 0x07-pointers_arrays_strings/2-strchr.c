@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 /**
  * _strchr - return pointer to first occurence of char c, or NULL if not found
  * @s: pointer to char
@@ -16,6 +17,10 @@ char *_strchr(char *s, char c)
 		{
 			return (&s[i]);
 		}
+	}
+	if (c == '\0')
+	{
+		return (&s(strlen(s));
 	}
 	return (NULL);
 }
