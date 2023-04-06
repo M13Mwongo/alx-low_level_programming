@@ -1,4 +1,5 @@
 #include "main.h"
+int _prime(int x, int y);
 /**
  * is_prime_number - checks if input is prime number
  * @n: number checked
@@ -7,18 +8,28 @@
  */
 int is_prime_number(int n)
 {
-	if (n <= 1)
+	if (n < 2)
 	{
 		return (0);
 	}
-	else if (n == 2)
+	return (_prime(n, n - 1));
+}
+/**
+ * _prime - recursive prime number checker
+ * @x: base number
+ * @y: iterator
+ *
+ * Return: 1 if true
+ */
+int _prime(int x, int y)
+{
+	if (y == 1)
 	{
-		return (1);
+		return (y);
 	}
-	else if (n % 2 == 0)
+	if (x % y == 0 && y > 0)
 	{
 		return (0);
 	}
-	else
-	{
-
+	return (_prime(x, y - 1));
+}
