@@ -1,5 +1,4 @@
 #include "main.h"
-#include "2-largest_number.c"
 /**
 * main - entry point
 * Return: 0
