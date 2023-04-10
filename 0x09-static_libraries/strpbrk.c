@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 /**
  * _strpbrk - locates the first instance of any of the bytes in a string
  * @s: string being searched
@@ -20,5 +21,5 @@ char *_strpbrk(char *s, char *accept)
 			}
 		}
 	}
-	return (NULL);
+	return (s);
 }
