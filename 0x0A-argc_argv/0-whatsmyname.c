@@ -1,6 +1,8 @@
 #include "main.h"
 /**
  * main - program that prints its name
+ * @argc: count of arguments
+ * @argv: array pointing to position of each argument
  *
  * Return: Always 0
  */
