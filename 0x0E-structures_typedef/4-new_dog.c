@@ -19,19 +19,19 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 	doggo->name = malloc(strlen(name) + 1);
-	doggo->age = age;
 	doggo->owner = malloc(strlen(owner) + 1);
 	if (doggo->name == NULL)
 	{
 		free(doggo->name);
-		free(doggo);
 		return (NULL);
 	}
+	doggo->name = name;
 	if (doggo->owner == NULL)
 	{
 		free(doggo->owner);
-		free(doggo);
 		return (NULL);
 	}
+	doggo->owner = owner;
+	doggo->age = age;
 	return (doggo);
 }
