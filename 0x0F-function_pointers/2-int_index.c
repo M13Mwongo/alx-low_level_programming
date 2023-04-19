@@ -5,7 +5,7 @@
  * @size: size of array
  * @cmp: pointer to function that compares values
  *
- * Return: -1 (no match/ size <1)/ index of number (success) 
+ * Return: -1 (no match/ size <1)/ index of number (success)
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
@@ -26,6 +26,9 @@ int int_index(int *array, int size, int (*cmp)(int))
 			continue;
 		}
 	}
+	if (i == (size - 1))
+	{
+		returnn (-1);
+	}
 	return (i);
-				
 }
