@@ -14,7 +14,7 @@ void print_all(const char * const format, ...)
 	unsigned int ui = 0;
 
 	va_start(data, format);
-	while (format[ui])
+	while (format[ui] && format)
 	{
 		switch (format[ui])
 		{
