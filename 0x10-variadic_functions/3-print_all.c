@@ -32,14 +32,12 @@ void print_all(const char * const format, ...)
 				break;
 			case 's':
 				s = va_arg(data, char*);
-				if (s != NULL)
-				{
-					printf("%s", s);
-				}
 				if (s == NULL)
 				{
 					printf("(nil)");
+					break;
 				}
+				printf("%s", s);
 				break;
 			default:
 				break;
