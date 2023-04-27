@@ -1,34 +1,28 @@
 #include "variadic_functions.h"
 /**
  * print_all - prints anything
- * @format: format of data being passed
+ * @fm: format of data being passed
  * Return: void
  */
-void print_all(const char * const format, ...)
+void print_all(const char * const fm, ...)
 {
 	va_list data;
-	int i;
-	char c;
 	char *s;
-	double f;
-	unsigned int ui = 0;
+	unsigned int u = 0;
 
-	va_start(data, format);
-	while (format[ui] && format)
+	va_start(data, fm);
+	while (fm[u] && fm != NULL)
 	{
-		switch (format[ui])
+		switch (fm[u])
 		{
 			case 'c':
-				c = va_arg(data, int);
-				printf("%c", c);
+				printf("%c", va_arg(data, int));
 				break;
 			case 'i':
-				i = va_arg(data, int);
-				printf("%d", i);
+				printf("%d", va_arg(data, int));
 				break;
 			case 'f':
-				f = va_arg(data, double);
-				printf("%f", f);
+				printf("%f", va_arg(data, double));
 				break;
 			case 's':
 				s = va_arg(data, char*);
@@ -42,8 +36,8 @@ void print_all(const char * const format, ...)
 			default:
 				break;
 		}
-		ui++;
-		if (format[ui] != '\0' && (format[ui] == 'c' || format[ui] == 'i' || format[ui] == 'f' || format[ui] == 's'))
+		u++;
+		if (fm[u] != '\0' && (fm[u] == 'c' || fm[u] == 'i' || fm[u] == 'f' || fm[u] == 's'))
 		{
 			printf(", ");
 		}
