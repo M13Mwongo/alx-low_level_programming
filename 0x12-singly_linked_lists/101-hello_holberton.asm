@@ -1,5 +1,5 @@
 section .data
-    msg:  db "Hello, Holberton", 10 ; message to print
+    msg:  db "Hello, Holberton",10
 section .text
     global main
     extern printf
@@ -10,4 +10,3 @@ main:
     call printf
     xor rax, rax
     ret
-
