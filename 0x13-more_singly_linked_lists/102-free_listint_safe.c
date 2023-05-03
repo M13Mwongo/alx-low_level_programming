@@ -20,12 +20,12 @@ size_t free_listint_safe(listint_t **h)
 		current = current->next;
 		free(temp);
 		size++;
-		if (temp <= current)
+		if (current >= temp)
 		{
 			*h = NULL;
+			printf("(nil)");
 			exit(98);
 		}
 	}
-	*h = NULL;
 	return (size);
 }
