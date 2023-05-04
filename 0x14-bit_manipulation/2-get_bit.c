@@ -2,7 +2,7 @@
 /**
  * get_bit - gets value of bit at index
  * @n: number being traversed
- * @index: index of bit 
+ * @index: index of bit
  * Return: bit value| -1 on failure
  */
 int get_bit(unsigned long int n, unsigned int index)
