@@ -8,18 +8,17 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	ssize_t nrd = 0;
+	char *buff = malloc(sizeof(size_t) * letters);
+	FILE *fp = fopen(filename, "r");
 
 	if (filename == NULL)
 	{
 		return (0);
 	}
-	char *buff = malloc(sizeof(size_t) * letters);
-
 	if (buff ==NULL)
 	{
 		return 0;
 	}
-	FILE *fp = fopen(filename, "r");
 	if (fp == NULL)
 	{
 		return 0;
@@ -31,7 +30,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return 0;
 	}
 	buff[nrd] = '\0';
-	if (fwrite(buff, sizeof(char), nrd, stdout) != nrd)
+	if (fwrite(buff, sizeof(char), nrd, stdout) != (size_t)nrd)
 	{
 		fclose(fp);
 		return 0;
